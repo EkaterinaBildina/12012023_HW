@@ -7,7 +7,7 @@
 Console.Write("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
-if (number < 1) Console.WriteLine("число введено не корректно"); 
+if (number < 1) Console.WriteLine("число введено некорректно"); 
 
 else
 {
