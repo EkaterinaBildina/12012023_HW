@@ -7,12 +7,12 @@
 Console.Write("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
-if (number < 1) Console.WriteLine("число введено некорректно"); 
+if (number < 1) Console.WriteLine("число введено некорректно");
 
 else
 {
-int sum = Sum(number);
-Console.WriteLine($"сумма цифр в числе: {number} = {sum}");
+    int sum = Sum(number);
+    Console.WriteLine($"сумма цифр в числе: {number} = {sum}");
 }
 
 int Sum(int num)
