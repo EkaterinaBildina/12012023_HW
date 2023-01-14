@@ -14,15 +14,15 @@ int maxValue = Convert.ToInt32(Console.ReadLine());
 
 int[] array = new int[size];
 
-CreateArray(array);
+CreateArray(array, minValue, maxValue);
 PrintArray(array);
 
-int[] CreateArray(int[] arr)
+int[] CreateArray(int[] arr, int min, int max)
 {
     Random rnd = new Random();
     for (int i = 0; i < arr.Length; i++)
     {
-        arr[i] = rnd.Next(minValue, maxValue);
+        arr[i] = rnd.Next(min, max);
     }
     return arr;
 }
