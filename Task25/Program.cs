@@ -7,24 +7,18 @@ int numberA = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите число B: ");
 int numberB = Convert.ToInt32(Console.ReadLine());
 
-if (numberB < 1)
+if (numberB < 1) Console.WriteLine("число B введено не корректно (изучить определение 'натуральные числа')!");
+
+int methodExponent = MethodExponent(numberA, numberB);
+Console.Write($"Number {numberA} to the power {numberB} = {methodExponent}");
+
+
+int MethodExponent(int numA, int numB)
 {
-    Console.WriteLine("число B введено не корректно (изучить определение 'натуральные числа')!");
-}
-
-else
-{
-    int methodExponent = MethodExponent(numberA, numberB);
-    Console.Write($"Number {numberA} to the power {numberB} = {methodExponent}");
-
-
-    int MethodExponent(int numA, int numB)
+    int result = 1;
+    for (int i = 1; i <= numB; i++)
     {
-        int result = 1;
-        for (int i = 1; i <= numB; i++)
-        {
-            result = result * numA;
-        }
-        return result;
+        result = result * numA;
     }
+    return result;
 }
