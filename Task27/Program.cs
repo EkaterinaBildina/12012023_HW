@@ -4,11 +4,16 @@
 // 9012 -> 12
 
 
-Console.Write("Введите целое число: ");
+Console.Write("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
+if (number < 1) Console.WriteLine("число введено не корректно"); 
+
+else
+{
 int sum = Sum(number);
 Console.WriteLine($"сумма цифр в числе: {number} = {sum}");
+}
 
 int Sum(int num)
 {
@@ -18,7 +23,7 @@ int Sum(int num)
     {
         int i = num % 10;
         sum = sum + i;
-        num = num/10;
+        num = num / 10;
     }
     return sum;
 }
